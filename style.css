@@ -2,10 +2,10 @@
 
 /*var(--header-color, blue);*/
 :root{
-    --main-bg-color: pink;
-    --second-color: white;
-    --third-color: grey;
-    --fourth-color: black;
+    --main-bg-color: #ecddc6;
+    --second-color:#c8ad7f;
+    --third-color: #e1c699;
+    --fourth-color: #5b3c11;
 
 
 }
@@ -38,14 +38,13 @@ header{
 
 }
 
-.logo{
-    font-weight: bold;
-    font-size: 20px
+.logo img{
+    width: 100px;
 }
 
 
 .logo span{
-    color: var(--second-color);
+    color: var(--fourth-color);
     
 }
 
@@ -71,7 +70,7 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: var(--second-color);
+    background-color: var(--fourth-color);
     color : var(--third-color); 
     padding: 15px;
     font-weight: bolder;
@@ -90,21 +89,28 @@ ul li a:hover {
     padding: 20px;
     border-radius: 20px; 
     font-weight: bold;
-    color: var(--third-color);
+    color: var(--fourth-color);
     box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
-    border: 2px solid var(--third-color);
-    transition: 0.5;
+    border: 2px solid var(--fourth-color);
+    transition: .2s;
     background-color: var(--second-color);
 }
 
 .btn:hover{
+    background-color: #5b3c11;
     color: var(--third-color);
     transform: rotate(5deg);
 }
 
-.btn i {
+.btn:hover i{
     color: var(--third-color);
+    transform: rotate(95deg);
+}
+
+.btn i {
+    color: var(--fourth-color);
     transform: rotate(5deg);
+    transition: .2s;
 }
 
 .home-section {
@@ -124,7 +130,7 @@ ul li a:hover {
     position: absolute;
     border-radius: 2rem;
     object-fit: cover;
-    border: 8px solid var(--fourth-color);
+    border: 8px solid var(--second-color);
     box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
 
 }
@@ -174,7 +180,7 @@ ul li a:hover {
 
 .right p {
     margin-bottom: 25px;
-    color: var(--third-color);
+    color: var(--second-color);
     font-size: 14px;
     width: 70%;
 }
@@ -231,7 +237,7 @@ ul li a:hover {
 .desc-button{
     display: flex;
     justify-content: space-between;
-    margin: 30px;
+    margin: 30px 0;
 
 }
 
@@ -270,7 +276,7 @@ ul li a:hover {
 }
 
 .destinations .gallerie .image {
-    width: 24px;
+    width: 24%;
     height: 350px;
     border-radius: 1rem;
     box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
@@ -289,14 +295,203 @@ ul li a:hover {
     border-radius: 1rem;
     transition: .5s;
     
-    
+}
+
+.destinations .gallerie {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.destinations .gallerie .image .description{
+    transform: translateY(350px);
+    background-color: var(--second-color);
+    padding: 20px;
+    transition: .5s;
+    text-align: center;
+} 
+
+.destinations .gallerie .image .description h1{
+    font-size: 20px;
+    margin-bottom: 10px;
+
+} 
+
+.destinations .gallerie .image .description p {
+    font-size: 14px;
+    color: var(--third-color);    
+} 
+
+
+.destinations .gallerie .image:hover .description{
+    transform: translateY(-120px);
+} 
+
+.destinations .gallerie .image:hover img{
+    transform: translateY(-120px);
+} 
+
+.best-trip{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-list{
+   width: 80%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.box-list .box{
+    width: 32.33%;
+    height: 400px;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+
+}
+
+.box-list .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .5s;
+
+}
+
+.box-list .box:hover img {
+    transform: scale(2) rotate(10deg);
+}
+
+.box-list .box .description {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--second-color);
+    padding: 20px;
+    width: 100%;
+    transition: .5s;
+}
+
+.box-list .box .description h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.rating{
+    color: var(--main-bg-color);
+    margin-top: 5px;
+    font-weight: bold;
+
+}
+
+.box-list .box .description .button-description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
+.box-list .box .description .button-description span{
+    font-size: 15px;
 
+}
 
+.box-list .box .description .button-description button{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    
+}
 
+.box-list .box .description .button-description button:hover{
+    background-color: var(--main-bg-color);
+    color: var(--fourth-color);
 
+}
+
+.best .title{
+    text-align: center;
+    font-size: 30px;
+}
+
+.best-trip .small-desc{
+    text-align: center;
+    margin: 30px auto; 
+    color: var(--third-color);
+    font-size: 14px;
+
+}
+
+.view-all{
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-trip h1 {
+    margin-bottom: 20px;
+
+}
+
+.email-trip p {
+    font-size: 14px;
+    color: var(--third-color);
+}
+
+.together {
+    display: flex;
+    justify-content: space-between;
+}
+
+.email-trip .together .text{
+    width: 500px;
+}
+
+.email-trip .together .input{
+    border: var(--second-color);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+    height: fit-content;
+    display: flex;
+    border-radius: 20px; 
+    overflow: hidden;
+}
+
+.email-trip .together .input input{
+    border: none;
+    padding: 12px;
+    padding-left: 20px;
+    width: 400px;
+    outline: none;
+    
+}
+
+footer{
+    background-color: var(--second-color);
+    border-radius: 60px 60px 0 0;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .right-footer{
+    color: var(--third-color);
+    font-size: 14px;
+}
+
+footer .right-footer span{
+    color: var(--fourth-color)
+
+}
 
 
 
