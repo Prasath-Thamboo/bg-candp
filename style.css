@@ -19,6 +19,7 @@
 
 body{
     background-color: var(--main-bg-color);
+    scroll-behavior: smooth;
 }
 
 .btn{
@@ -372,10 +373,12 @@ ul li a:hover {
 }
 
 .box-list{
+   margin-top:20px;
    width: 80%;
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
+   gap: 10px;
 }
 
 .box-list .box{
@@ -586,7 +589,33 @@ footer .right-footer span{
     .destinations .gallerie .image{
         margin-bottom: 10px;
     }
+
+    .box-list{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .together {
+        flex-direction: column;
+    }
+
+    .email-trip .together .text{
+        padding-bottom: 10px;
+        width: 100%;
+    }
+
+    .email-trip .together .input{
+        overflow: visible;
+        width: 100%;
+    }
+
+    .email-trip .together .input input{
+        padding-left: 0;
+        width: 100%;
+    }
   }
+
+
 
   @media screen and (max-width: 1400px) and (min-width: 900px){
     .home-section .right{
