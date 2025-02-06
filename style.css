@@ -17,10 +17,17 @@
     font-family: "Poppins", sans-serif;
 }
 
-body{
+body {
+    margin: 0;
+    padding: 0;
     background-color: var(--main-bg-color);
+    background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="lightgray" stroke-width="1"/></pattern><pattern id="diagonal-lines" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 0 0 L 10 10" fill="none" stroke="lightgray" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/><rect width="100%" height="100%" fill="url(%23diagonal-lines)"/></svg>');
+    background-size: 100px 100px; /* Taille du motif */
+    background-repeat: repeat; /* Répéter le motif */
     scroll-behavior: smooth;
-}
+
+  }
+  
 
 .btn{
     cursor: pointer;
@@ -129,6 +136,51 @@ ul li a:hover {
     transition: .2s;
 }
 
+/* Cacher le menu par défaut */
+.menumb {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: all ease .5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+
+}
+
+.menumb label {
+    position: absolute; 
+    top: 30px;
+    right: 30px;
+
+}
+
+/* Afficher le menu lorsque le checkbox est coché */
+#menumb:checked ~ .menumb {
+    display: flex;
+}
+
+/* Styliser le label pour qu'il ressemble à un bouton */
+label[for="menumb"] {
+    cursor: pointer;
+    padding: 2px 20px;
+    color: var(--fourth-color);
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    display: none;
+}
+
+#menumb {
+    display: none;
+}
 
 /************************************************************Hero****************************************************/
 
@@ -141,7 +193,7 @@ ul li a:hover {
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 200px;
+    padding: 200px 200px 50px 200px;
     flex-wrap: wrap;
 }
 
@@ -553,6 +605,10 @@ footer .right-footer span{
 @media screen and (max-width: 900px) {
     header ul {
         display: none
+    }
+    
+    label[for="menumb"] {
+        display: inline-block;
     }
 
     .home-section {

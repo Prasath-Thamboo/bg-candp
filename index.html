@@ -26,9 +26,38 @@
             <i class="fa-solid fa-phone" style="padding-right: 5px;"></i>
             <span>Réserver</span>
         </button>
+
+        <input type="checkbox" id="menumb">
+        <label for="menumb" class="menu-icon">
+            &#9776; <!-- Caractère Unicode pour le menu hamburger -->
+        </label>
+        <ul class="menumb">
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">A propos</a></li>
+            <li><a href="#">Qualité</a></li>
+            <li><a href="#">Clients</a></li>
+            <label for="menumb">
+                &#10006;
+            </label>
+        </ul>
+
+
     </header>
 
     <section class="home-section">
+
+        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="lightgray" stroke-width="1"/>
+              </pattern>
+              <pattern id="diagonal-lines" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 0 0 L 10 10" fill="none" stroke="lightgray" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+            <rect width="100%" height="100%" fill="url(#diagonal-lines)"/>
+          </svg>
         
         <div class="left">
             <img class="left-image1" src="image/Cake.jpg" alt="image-gateau">
@@ -71,7 +100,7 @@
         </div>
         <div class="gallerie">
             <div class="image">
-                <img src="image/FramboiseBlanc.png" alt="" style="background-color: white;">
+                <img src="image/passion.jpg" alt="" style="background-color: white;">
                 <div class="description">
                     <h1>Gateau coco fruit de la passion</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem voluptatum culpa, 
@@ -79,7 +108,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="image/Egypt.jpg" alt="">
+                <img src="image/fram.jpg" alt="">
                 <div class="description">
                     <h1>Gateau Framboise chocolat blanc</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem voluptatum culpa, 
@@ -87,7 +116,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="image/Canada.jpg" alt="">
+                <img src="image/vanille.jpg" alt="">
                 <div class="description">
                     <h1>Gateau Vanille</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem voluptatum culpa, 
@@ -95,7 +124,7 @@
                 </div>
             </div>
             <div class="image">
-                <img src="image/South-Africa.jpg" alt="">
+                <img src="image/chocolat.jpg" alt="">
                 <div class="description">
                     <h1>Gateau Chocolat </h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem voluptatum culpa, 
@@ -168,7 +197,7 @@
     </section>
 
     <section class="email-trip">
-        <h1 class="title">Donnez-vous votre e-mail</h1>
+        <h1 class="title">Donnez-nous votre e-mail</h1>
 
         <div class="together">
             <div class="text">
@@ -177,14 +206,14 @@
             </div>
             <div class="input">
                 <input type="text" placeholder="Email here">
-                <button class="btn">Send</button>
+                <button class="btn">Envoyer</button>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="logo-div">
-            <p class="logo">BG-Cake <span>.</span> </p>
+            <p class="logo">BG-Cake <span>.</span> <a href="#"> Règles d'utilisation</a> </p>
         </div>
         <p class="right-footer">All right reserved <span>Copyright 2025</span></p>
     </footer>
