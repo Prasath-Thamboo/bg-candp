@@ -546,24 +546,11 @@ label[for="menumb"] {
 
 .email-trip .together .input{
     border: var(--second-color);
-    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
-    height: fit-content;
     display: flex;
-    border-radius: 20px; 
-    overflow: hidden;
-}
-
-.email-trip .together .input input{
-    border: none;
-    padding: 12px;
-    padding-left: 20px;
-    width: 400px;
-    outline: none;
-    
 }
 
 .email-trip .together .input .btn{
-    border-radius:0;
+    border-radius:20px;
     
 }
 
@@ -603,6 +590,15 @@ footer .right-footer span{
 /**************************************Mobile*********************************************************/
 
 @media screen and (max-width: 900px) {
+
+    .home-section .left-image1:hover{
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .home-section .left-image2:hover{
+        transform: scale(1.1) rotate(-3deg);
+    }
+
     header ul {
         display: none
     }
@@ -613,7 +609,7 @@ footer .right-footer span{
 
     .home-section {
         padding: 0;
-        padding-top: 200px;
+        padding-top: 60px;
         
     }
 
@@ -624,10 +620,11 @@ footer .right-footer span{
 
     .home-section .left img{
         width: 300px;
+        height: auto;
     }
 
     .home-section .left-image2{
-        left: 50px;
+        left: 30px;
         
     }
 
@@ -667,6 +664,14 @@ footer .right-footer span{
 
     .email-trip .together .input input{
         padding-left: 0;
+        width: 100%;
+    }
+
+    .right {
+        text-align: center;
+    }
+
+    .right p{
         width: 100%;
     }
   }
