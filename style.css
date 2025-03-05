@@ -549,7 +549,7 @@ label[for="menumb"] {
     display: flex;
 }
 
-.email-trip .together .input .btn{
+.email-trip .together .input a .btn{
     border-radius:20px;
     
 }
